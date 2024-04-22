@@ -1,4 +1,6 @@
 import "./index.css";
+import ProgressSquare from "./ProgressSquare/page";
+import ProgressSquareWithBorder from "./ProgressSquareWithBorder/page";
 
 const steps = [
   {
@@ -38,48 +40,6 @@ const steps = [
   },
 ];
 
-// 矩形进度条
-const ProgressSquare = () => {
-  return (
-    <div className="progress">
-      <ul className="steps">
-        {steps.map((item) => {
-          const { key, title, status } = item;
-          return (
-            <li key={key} className={`step ${status}`}>
-              <i className="icon"></i>
-              <span className="text">{title}</span>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  );
-};
-
-// 矩形进度条带描边
-const ProgressSquareWithBorder = () => {
-  return (
-    <div className="progress">
-      <ul className="steps">
-        {steps.map((item) => {
-          const { key, title, status } = item;
-          return (
-            <li key={key} className={`step ${status}`}>
-              <i className="icon"></i>
-              <div className="shape">
-                <i className="left"></i>
-                <span className="text">{title}</span>
-                <i className="right"></i>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  );
-};
-
 // 进度条集合
 const ProgressList = () => {
   const list = [
@@ -96,8 +56,9 @@ const ProgressList = () => {
   return (
     <ul className="progressList">
       {list.map((item) => (
-        <li>
-          <item.component />
+        <li key={item.title}>
+          <h3 className="title">{item.title}</h3>
+          <item.component steps={steps} />
         </li>
       ))}
     </ul>

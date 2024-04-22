@@ -1,0 +1,87 @@
+/* 矩形进度条-有描边 */
+.steps {
+  display: flex;
+}
+.step {
+  width: 10%;
+  box-sizing: content-box;
+  display: block;
+  margin-right: 2rem;
+  position: relative;
+  width: 150px; /* 箭头的宽度 */
+  height: 32px; /* 箭头的高度 */
+  background-color: #fff; /* 箭头的颜色 */
+  text-align: center;
+  color: #97a8be;
+  line-height: 32px;
+  position: relative;
+  border-top: 1px solid #dcdfe6;
+  border-bottom: 1px solid #dcdfe6;
+  /* border-left: 1px solid #fff; */
+  border-radius: 2px; /* 方便衔接处更圆滑 */
+}
+
+/* 三角形的长度可以矩形高度一半32px/2= 16px绘制，可以稍微多1px，衔接处衔接更好*/
+.left,
+.right {
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  border-width: 17px 0px 17px 17px;
+  border-color: transparent transparent transparent #dcdfe6;
+}
+.step .right {
+  left: 100%;
+}
+.step .left::after,
+.step .right::after {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: -17.5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent transparent transparent;
+  border-width: 16px 0px 16px 16px;
+  border-left-color: #fff;
+}
+
+.step .texts {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+/** 运行中样式 */
+.running {
+  background-color: #1494d3;
+  border-top: 1px solid #1494d3;
+  border-bottom: 1px solid #1494d3;
+  color: #fff;
+}
+.running .right,.running .right::after {
+  border-left-color: #1494d3;
+}
+
+/** 完成样式 */
+.done {
+  color: #1494d3;
+  border-top: 1px solid #1494d3;
+  border-bottom: 1px solid #1494d3;
+}
+.done.step .texts .icon {
+  display: block;
+  width: 24px;
+  height: 12px;
+  z-index: 100;
+  margin-right: 6px;
+  background-image: url("../gou.png");
+  background-size: cover;
+}
+.done .left, .done .right{
+  border-left-color: #1494d3;
+}

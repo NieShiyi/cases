@@ -1,0 +1,34 @@
+<!-- SVG（Scalable Vector Graphics，可缩放矢量图形）是一种用来描述二维矢量图形的XML语言。
+SVG可以用来创建图形，比如图标、图表和动画
+SVG是矢量图形，因此可以无限放大而不会失真。SVG通过一系列的元素和属性来定义图形。
+SVG是由W3C（World Wide Web Consortium，万维网联盟）定义的开放标准，它们制定了SVG的规范，包括各种形状元素和属性的定义。
+SVG文档由一系列的XML元素组成，其中包含了图形的结构和属性。 -->
+
+<!-- XML声明指定了XML版本和字符编码。在这个示例中，XML版本是1.0，而standalone="no"表示这个XML文档可能依赖于外部实体（比如DTD或者Schema）一般情况下，如果你不写XML声明，解析器会假设使用的是最新的XML版本 -->
+<?xml version="1.0" standalone="no"?>
+
+<!-- DOCTYPE声明用于指定文档类型和DTD（文档类型定义）。在这个示例中，它指定了SVG 1.1的文档类型，该 DTD 位于 “http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd”。该 DTD 位于 W3C，含有所有允许的 SVG 元素。并引用了对应的DTD文件，以便解析器可以验证SVG文档的结构。 -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<!-- SVG 代码以 <svg> 元素开始，包括开启标签 <svg> 和关闭标签 </svg> 。这是根元素。width 和 height 属性可设置此 SVG 文档的宽度和高度。version 属性可定义所使用的 SVG 版本，xmlns 属性可定义 SVG 命名空间。 -->
+<!-- xmlns 属性用于指定命名空间，告诉解析器这是一个 SVG 文档。通常，它的值是 http://www.w3.org/2000/svg，表示 SVG 的命名空间。这样可以确保解析器正确地解析SVG文档并且应用相应的规则。 -->
+<svg width="100vw" height="300" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- 矩形 -->
+    <rect x="10" y="20" width="100" height="50" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
+    <!-- 圆形 -->
+    <circle cx="200" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+    <!-- 椭圆 -->
+    <ellipse cx="400" cy="50" rx="80" ry="30" style="fill:rgb(200,100,50);stroke:rgb(0,0,100);stroke-width:2" />
+    <!-- 线条 -->
+    <line x1="550" y1="10" x2="700" y2="60" style="stroke:rgb(99,99,99);stroke-width:2" />
+    <!-- 多边形-闭合 points 属性定义多边形每个角的 x 和 y 坐标 -->
+    <polygon points="750,10 800,70 850,80 900,20" style="fill:#cccccc;stroke:#000000;stroke-width:1" />
+    <!-- 折线 -->
+    <polyline points="0,100 0,140 40,140 40,180 80,180 80,220" style="fill:white;stroke:red;stroke-width:2" />
+    <!-- 路径 像M、L、Z这样的标识还有一些。在这里这三个分别用来指示路径的起始点、直线段和闭合操作-->
+    <path d="M250 150 L150 250 L350 250 Z" />
+</svg>
+
+<!-- *后面的例子会省略XML声明和DOCTYPE声明，直接从svg跟标签开始-->
+<!-- *这里是简单的图形绘制,参数配置可参照https://www.w3school.com.cn/svg/svg_rect.asp -->
+<!-- *教程可参照https://www.w3schools.com/graphics/svg_path.asp -->
