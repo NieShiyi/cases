@@ -1,16 +1,21 @@
 import React from "react";
 import BaseShapes from "./baseShapes.svg";
 import Path from "./path.svg";
+import BaseTags from "./baseTags.svg";
 import "./index.css";
 
 const list = [
   {
-    title: "简单图形",
+    title: "基础图形",
     component: BaseShapes,
   },
   {
     title: "path路径绘制",
     component: Path,
+  },
+  {
+    title: "基础标签",
+    component: BaseTags,
   },
 ];
 

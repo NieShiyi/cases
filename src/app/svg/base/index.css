@@ -4,6 +4,8 @@
 
 .item {
   margin-bottom: 2rm;
+  width: 100%;
+  min-height: 300px;
 }
 
 .item .title {

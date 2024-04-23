@@ -1,8 +1,11 @@
-<!-- SVG（Scalable Vector Graphics，可缩放矢量图形）是一种用来描述二维矢量图形的XML语言。
+<!-- 
+SVG（Scalable Vector Graphics，可缩放矢量图形）是一种用来描述二维矢量图形的XML语言。
 SVG可以用来创建图形，比如图标、图表和动画
 SVG是矢量图形，因此可以无限放大而不会失真。SVG通过一系列的元素和属性来定义图形。
 SVG是由W3C（World Wide Web Consortium，万维网联盟）定义的开放标准，它们制定了SVG的规范，包括各种形状元素和属性的定义。
-SVG文档由一系列的XML元素组成，其中包含了图形的结构和属性。 -->
+SVG文档由一系列的XML元素组成，其中包含了图形的结构和属性。
+SVG可以通过css和javascript控制
+ -->
 
 <!-- XML声明指定了XML版本和字符编码。在这个示例中，XML版本是1.0，而standalone="no"表示这个XML文档可能依赖于外部实体（比如DTD或者Schema）一般情况下，如果你不写XML声明，解析器会假设使用的是最新的XML版本 -->
 <?xml version="1.0" standalone="no"?>
@@ -30,5 +33,4 @@ SVG文档由一系列的XML元素组成，其中包含了图形的结构和属�
 </svg>
 
 <!-- *后面的例子会省略XML声明和DOCTYPE声明，直接从svg跟标签开始-->
-<!-- *这里是简单的图形绘制,参数配置可参照https://www.w3school.com.cn/svg/svg_rect.asp -->
 <!-- *教程可参照https://www.w3schools.com/graphics/svg_path.asp -->

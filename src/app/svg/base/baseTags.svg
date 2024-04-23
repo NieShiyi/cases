@@ -1,0 +1,38 @@
+<svg height="1000px" width="100vw" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- text -->
+    <g>
+        <text x="15" y="30" fill="red">简单text：I love SVG</text>
+        <text x="220" y="30" fill="none" stroke="red" font-size="35">描边但不填充text：I love SVG!</text>
+        <text x="805" y="30" fill="pink" stroke="blue" font-size="35">描边且填充text：I love SVG!</text>
+        <!-- text rotate -->
+        <text x="15" y="130" fill="red" font-size="35" rotate="30">旋转一个维度text: I love SVG!</text>
+        <text x="655" y="0" fill="red" font-size="25" transform="rotate(10,5,10)">旋转三个维度text：I love SVG!</text>
+        <!-- text中的tspan -->
+        <text x="15" y="250" fill="red" font-size="35">I Love
+            <tspan fill="none" stroke="green">text里的tspan标签：SVG</tspan>!
+        </text>
+    </g>
+
+    <!-- textPath -->
+    <g>
+        <path id="lineAC" d="M 30 420 q 150 -250 300 0" stroke="blue" stroke-width="2" fill="none" />
+        <text style="fill:red;font-size:25px;">
+            <textPath href="#lineAC" startOffset="20">textPath： I love SVG! I love SVG!</textPath>
+        </text>
+    </g>
+
+    <!-- Link：a -->
+    <!-- 如果直接使用href失效。可以在svg上添加xmlns:xlink="http://www.w3.org/1999/xlink"，在a标签上使用xlink:href -->
+    <g>
+        <a xlink:href="https://www.w3schools.com/graphics/" target="_blank">
+            <text x="15" y="470" fill="red" font-size="25">I love SVG!</text>
+        </a>
+    </g>
+
+    <!-- image -->
+    <g>
+        <!-- TODO 相对路径加载失败, 图片位于和svg同层 -->
+        <image x="15" y="500" height="200" width="300" href="pulpitrock.jpg" />
+        <image x="450" y="500" height="200" width="300" href="https://www.w3schools.com/graphics/pulpitrock.jpg" />
+    </g>
+</svg>
