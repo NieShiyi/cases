@@ -1,6 +1,7 @@
 import "./index.css";
 import ProgressSquare from "./ProgressSquare/page";
 import ProgressSquareWithBorder from "./ProgressSquareWithBorder/page";
+import ProgressSquareWithBorderSvg from "@/app/svg/progress/page";
 
 const steps = [
   {
@@ -50,6 +51,10 @@ const ProgressList = () => {
     {
       title: "矩形进度条带描边",
       component: ProgressSquareWithBorder,
+    },
+    {
+      title: "矩形进度条带描边-svg版本",
+      component: ProgressSquareWithBorderSvg,
     },
   ];
 

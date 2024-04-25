@@ -1,0 +1,12 @@
+.container {
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.progress_svg__item {
+  fill: #000;
+}
+
+.item {
+  fill: #f2f2f2;
+}

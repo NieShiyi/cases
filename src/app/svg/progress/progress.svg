@@ -1,0 +1,10 @@
+<svg height="34px" width="196px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <style>
+        /* .item {
+            fill: #fff;
+            stroke: #DCDFE6;
+        } */
+    </style>
+    <path id="item" class="item" d="M0 0 l16 16 l-16 16 l180 0 l16 -16 l-16 -16 l-180 0Z" stroke="#DCDFE6"
+        stroke-width="2" fill="#fff" />
+</svg>
